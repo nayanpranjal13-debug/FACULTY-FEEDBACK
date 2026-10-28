@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submitted Feedback | Faculty Feedback Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-icon">🎓</span> Faculty Feedback Portal</a>
+    <div class="top-actions"><span id="welcomeText">Welcome</span><button class="link-button"
+        data-logout>Logout</button></div>
+  </header>
+  <div class="page-layout">
+    <aside class="sidebar">
+      <a class="nav-link" href="feedback.html">▦ <span>My Courses</span></a>
+      <a class="nav-link active" href="history.html">▤ <span>Submitted Feedback</span></a>
+    </aside>
+    <main class="content">
+      <div class="page-heading">
+        <div>
+          <h1>Submitted Feedback</h1>
+          <p>View the feedback you have submitted.</p>
+        </div>
+        <a class="button button-primary" href="feedback.html">Give Feedback</a>
+      </div>
+      <section class="panel">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Course</th>
+                <th>Faculty</th>
+                <th>Rating</th>
+                <th>Date</th>
+                <th>Comments</th>
+              </tr>
+            </thead>
+            <tbody id="historyTable"></tbody>
+          </table>
+        </div>
+        <p id="emptyHistory" class="empty-state hidden">You haven't submitted feedback yet. Choose a course to get
+          started.</p>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

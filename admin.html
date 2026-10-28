@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty Overview | Faculty Feedback Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="admin.html"><span class="brand-icon">🎓</span> Faculty Feedback Portal</a>
+    <div class="top-actions"><span id="welcomeText">Welcome</span><button class="link-button" data-logout>Logout</button></div>
+  </header>
+  <div class="page-layout">
+    <aside class="sidebar">
+      <a class="nav-link active" href="#" data-admin-nav="dashboard">▦ <span>Dashboard</span></a>
+      <a class="nav-link" href="#" data-admin-nav="courses">▤ <span>Courses &amp; Faculty</span></a>
+      <a class="nav-link" href="#" data-admin-nav="feedback">☷ <span>View Feedback</span></a>
+    </aside>
+    <main class="content">
+      <div class="page-heading"><div><h1>Feedback Overview</h1></div></div>
+      <section class="stats-grid">
+        <article class="stat-card"><span class="stat-icon blue">▣</span><div><strong id="totalCourses">0</strong><small>Courses</small></div></article>
+        <article class="stat-card"><span class="stat-icon green">★</span><div><strong id="totalFeedback">0</strong><small>Feedback submissions</small></div></article>
+        <article class="stat-card"><span class="stat-icon purple">☆</span><div><strong id="averageRating">—</strong><small>Average rating</small></div></article>
+      </section>
+
+      <section id="courses" class="panel hidden">
+        <div class="panel-heading"><div><h2>Courses and Faculty</h2></div></div>
+        <div class="table-wrap">
+          <table><thead><tr><th>Course Code</th><th>Course Name</th><th>Faculty</th></tr></thead><tbody id="adminCourses"></tbody></table>
+        </div>
+      </section>
+
+      <section id="feedback" class="panel hidden">
+        <div class="panel-heading"><div><h2>Recent Feedback</h2></div></div>
+        <div class="table-wrap">
+          <table><thead><tr><th>Course</th><th>Faculty</th><th>Rating</th><th>Comments</th><th>Date</th></tr></thead><tbody id="adminFeedback"></tbody></table>
+        </div>
+        <p id="adminEmpty" class="empty-state hidden">No feedback has been submitted yet.</p>
+      </section>
+
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

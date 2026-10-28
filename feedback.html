@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Feedback | Faculty Feedback Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-icon">🎓</span> Faculty Feedback Portal</a>
+    <div class="top-actions"><span id="welcomeText">Welcome</span><button class="link-button" data-logout>Logout</button></div>
+  </header>
+
+  <div class="page-layout">
+    <aside class="sidebar">
+      <a class="nav-link active" href="feedback.html">▦ <span>My Courses</span></a>
+      <a class="nav-link" href="history.html">▤ <span>Submitted Feedback</span></a>
+    </aside>
+
+    <main class="content">
+      <div class="page-heading">
+        <div>
+          <h1>My Courses</h1>
+          <p>Select a course to give feedback to the respective faculty.</p>
+        </div>
+      </div>
+
+      <section id="courseList" class="course-list"></section>
+
+      <section id="feedbackSection" class="panel feedback-panel hidden">
+        <div class="panel-heading">
+          <div>
+            <h2>Course Feedback</h2>
+            <p id="selectedCourseText">Choose a course</p>
+          </div>
+          <button id="closeFeedback" class="button button-light" type="button">Back to courses</button>
+        </div>
+        <form id="feedbackForm">
+          <input type="hidden" id="courseId">
+          <div class="rating-row">
+            <div><strong>Teaching Quality</strong><small>How well does the faculty explain the topic?</small></div>
+            <div class="stars" data-rating="teaching" role="radiogroup" aria-label="Teaching quality rating"></div>
+          </div>
+          <div class="rating-row">
+            <div><strong>Subject Clarity</strong><small>How clearly are concepts explained?</small></div>
+            <div class="stars" data-rating="clarity" role="radiogroup" aria-label="Subject clarity rating"></div>
+          </div>
+          <div class="rating-row">
+            <div><strong>Punctuality</strong><small>How punctual is the faculty?</small></div>
+            <div class="stars" data-rating="punctuality" role="radiogroup" aria-label="Punctuality rating"></div>
+          </div>
+          <div class="rating-row">
+            <div><strong>Course Content</strong><small>How useful is the course content?</small></div>
+            <div class="stars" data-rating="content" role="radiogroup" aria-label="Course content rating"></div>
+          </div>
+          <div class="rating-row">
+            <div><strong>Overall Satisfaction</strong><small>Your overall experience</small></div>
+            <div class="stars" data-rating="overall" role="radiogroup" aria-label="Overall satisfaction rating"></div>
+          </div>
+          <label class="field-label" for="comments">Additional comments (optional)</label>
+          <textarea id="comments" rows="4" maxlength="500" placeholder="Share your feedback here..."></textarea>
+          <div class="form-bottom">
+            <span id="ratingHint" class="muted-text">Please rate all five categories.</span>
+            <button class="button button-primary" type="submit">Submit Feedback</button>
+          </div>
+          <p id="feedbackError" class="error-message" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="successPanel" class="panel success-panel hidden">
+        <div class="success-mark">✓</div>
+        <h2>Feedback Submitted!</h2>
+        <p>Thank you for sharing your feedback.</p>
+
+        <a class="button button-primary" href="history.html">View Submitted Feedback</a>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

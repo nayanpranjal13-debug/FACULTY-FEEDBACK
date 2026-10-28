@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty Feedback Portal | Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-icon">🎓</span> Faculty Feedback Portal</a>
+    <a class="top-link" href="index.html">Home</a>
+  </header>
+
+  <main class="login-wrap">
+    <section class="welcome-panel">
+      <div class="welcome-icon">🎓</div>
+      <h1>Welcome</h1>
+      <p>Faculty Feedback &amp; Course Evaluation</p>
+
+      <form id="loginForm" class="login-form">
+        <div class="role-choice">
+          <label><input type="radio" name="role" value="student" checked> Student</label>
+          <label><input type="radio" name="role" value="faculty"> Faculty</label>
+        </div>
+        <label id="usernameLabel" class="field-label" for="username">Registration Number</label>
+        <input id="username" name="username" type="text" placeholder="Enter Registration Number" required>
+        <div id="passwordGroup">
+          <label class="field-label" for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="Enter password">
+        </div>
+        <p id="loginError" class="error-message" aria-live="polite"></p>
+        <button class="button button-primary full-width" type="submit">Login</button>
+      </form>
+
+
+    </section>
+  </main>
+  <footer class="footer">Faculty Feedback Portal</footer>
+  <script src="script.js"></script>
+</body>
+</html>
